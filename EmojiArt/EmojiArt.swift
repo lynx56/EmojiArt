@@ -35,3 +35,23 @@ struct EmojiArt {
         emojis.append(.init(text: text, x: x, y: y, size: size, id: uniqEmojiId))
     }
 }
+
+
+
+//MARK: - Codable
+
+extension EmojiArt.Emoji: Codable {}
+
+extension EmojiArt: Codable {
+    
+    init?(json: Data?) {
+        guard let json = json else { return nil }
+        guard let newEmojiArt = try? JSONDecoder().decode(EmojiArt.self, from: json) else { return nil }
+        
+        self = newEmojiArt
+    }
+    
+    var json: Data? {
+         return try? JSONEncoder().encode(self)
+     }
+}

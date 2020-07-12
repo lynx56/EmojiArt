@@ -10,12 +10,28 @@ import SwiftUI
 
 class EmojiArtDocument: ObservableObject {
     static let palette = "🗿👑🤡🔥🎱"
-    
-    @Published private var emojiArt = EmojiArt()
+    private static let untitled = "EmojiArtDocument.Untitled"
+    //@Published
+    private var emojiArt = EmojiArt() {
+        willSet {
+            objectWillChange.send()
+        }
+        didSet {
+            UserDefaults.standard.set(emojiArt.json, forKey: EmojiArtDocument.untitled)
+        }
+    }
     @Published private(set) var backgroundImage: UIImage?
     
     var emojis: [EmojiArt.Emoji] {
         return emojiArt.emojis
+    }
+    
+    init() {
+        guard let data = UserDefaults.standard.data(forKey: EmojiArtDocument.untitled) else { return }
+        guard let loadedEmojiArt = EmojiArt(json: data) else { return }
+        
+        self.emojiArt = loadedEmojiArt
+        fetchBackgoundImageData()
     }
     
     
@@ -36,6 +52,11 @@ class EmojiArtDocument: ObservableObject {
         guard let index = emojiArt.emojis.firstIndex(matching: emoji) else { return }
         let scaledSize = CGFloat(emojiArt.emojis[index].size) * scale
         emojiArt.emojis[index].size = Int(scaledSize.rounded(.toNearestOrEven))
+    }
+    
+    func clear() {
+        emojiArt = EmojiArt()
+        backgroundImage = nil
     }
     
     func setBackgound(url: URL?) {
