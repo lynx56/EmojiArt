@@ -18,6 +18,7 @@
 		887E15D024B6162000CDB34E /* EmojiArtExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E15CF24B6162000CDB34E /* EmojiArtExtensions.swift */; };
 		88FFA63324B719BA00A7F6D2 /* OptionalImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FFA63224B719BA00A7F6D2 /* OptionalImage.swift */; };
 		88FFA63524B71EB600A7F6D2 /* AnimatableSystemFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FFA63424B71EB600A7F6D2 /* AnimatableSystemFontModifier.swift */; };
+		88FFE6A724BF2665009D8ED6 /* CheckModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FFE6A624BF2665009D8ED6 /* CheckModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		887E15CF24B6162000CDB34E /* EmojiArtExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiArtExtensions.swift; sourceTree = "<group>"; };
 		88FFA63224B719BA00A7F6D2 /* OptionalImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalImage.swift; sourceTree = "<group>"; };
 		88FFA63424B71EB600A7F6D2 /* AnimatableSystemFontModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableSystemFontModifier.swift; sourceTree = "<group>"; };
+		88FFE6A624BF2665009D8ED6 /* CheckModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				887E15CB24B6114200CDB34E /* EmojiArt.swift */,
 				887E15C924B60BBA00CDB34E /* EmojiArtDocument.swift */,
 				887E15B924B60B7400CDB34E /* EmojiArtDocumentView.swift */,
+				88FFE6A624BF2665009D8ED6 /* CheckModifier.swift */,
 				88FFA63424B71EB600A7F6D2 /* AnimatableSystemFontModifier.swift */,
 				88FFA63224B719BA00A7F6D2 /* OptionalImage.swift */,
 				887E15BB24B60B7600CDB34E /* Assets.xcassets */,
@@ -167,6 +170,7 @@
 				887E15CC24B6114200CDB34E /* EmojiArt.swift in Sources */,
 				887E15BA24B60B7400CDB34E /* EmojiArtDocumentView.swift in Sources */,
 				88FFA63324B719BA00A7F6D2 /* OptionalImage.swift in Sources */,
+				88FFE6A724BF2665009D8ED6 /* CheckModifier.swift in Sources */,
 				88FFA63524B71EB600A7F6D2 /* AnimatableSystemFontModifier.swift in Sources */,
 				887E15CA24B60BBA00CDB34E /* EmojiArtDocument.swift in Sources */,
 			);

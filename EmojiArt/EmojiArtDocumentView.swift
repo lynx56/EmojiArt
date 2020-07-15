@@ -38,8 +38,9 @@ struct EmojiArtDocumentView: View {
                        
                     ForEach(self.document.emojis) { emoji in
                         Text(emoji.text)
-                            .font(animatableWithSize: emoji.fontSize * self.zoomScale)
-                            .position(self.position(for: emoji, in: geometry.size))
+                        .checkable()
+                        .font(animatableWithSize: emoji.fontSize * self.zoomScale)
+                        .position(self.position(for: emoji, in: geometry.size))
                     }
                 }
                 .clipped()
@@ -141,3 +142,4 @@ struct ContentView_Previews: PreviewProvider {
         EmojiArtDocumentView(document: EmojiArtDocument())
     }
 }
+
